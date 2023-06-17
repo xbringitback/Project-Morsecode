@@ -1,0 +1,145 @@
+@font-face {
+    font-family: poppins;
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html {
+    font-size: 62,5%;
+    font-family: "poppins", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #253045;
+}
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 1.5rem;
+}
+h4 {
+    font-size: 2rem;
+    padding: 1% 15%;
+}
+
+/* upper */
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5vw 5vw;
+}
+
+textarea {
+    width: 40vw;
+    max-width: 40vw;
+    min-width:40vw;
+    height: 10vw;
+    min-height: 15vw;
+    background-color: rgba(76, 76, 121, 0.265);
+    color: white;
+    font-size: 1.1rem;
+    padding: 1% 2%;
+}
+
+/* btn style */
+
+.btns {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5rem;
+}
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  transform: scale(1.5);
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* lower */
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 70rem;
+    border-collapse: collapse;
+}
+td {
+
+    border: solid white 1px;
+}
+tr {
+    border: solid white 0px;
+    text-align: center;
+}
+
+.outputExplanation {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1% 5%;
+    max-width: 80%;
+}
+
+.punctuation {
+    margin-bottom: 3.5rem;
+}
+
+@media only screen and (max-width: 1520px) {
+    .upper {
+        padding: 0vw;
+        margin-top: 2rem; 
+    }
+    .btn {
+        margin-top: 2vw;
+    }
+    .button-89 {
+        transform: scale(1);
+    }
+}

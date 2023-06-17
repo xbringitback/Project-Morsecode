@@ -4,13 +4,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input">
-    <input type="button" value="Encrypt" id="btn">
-    <p class="outputCode"></p>
-    <p class="outputExplanation"></p>
+    <header>
+        <h1>Morse Code Translator</h1>
+    </header>
+    <main>
+        <section class="upper">
+            <article class="text-container">
+                <h2>Text</h2>
+                <textarea id="input"></textarea>
+            </article>
+            <article class="btns">
+                <input type="button" value="Delete" class="deleteBtn button-89">
+                <input type="button" value="Encrypt" class="btn button-89">
+            </article>
+            <article class="output-container">
+                <h2>Morse Code</h2>
+                <textarea class="outputCode"></textarea>
+            </article>
+        </section>
+        <section class="explanation-container">
+            <h4>Explanation:</h4>
+            <p class="outputExplanation"></p>
+        </section>
+        <section class="lower">
+            <article class="letters">
+                <table>
+                    <tbody>
+                        <tr>
+                            <h3>Letters</h3>
+                            <td>A</td>
+                            <td>.-</td>
+                            <td>B</td>
+                            <td>-...</td>
+                            <td>C</td>
+                            <td>-.-.</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>-..</td>
+                            <td>E</td>
+                            <td>.</td>
+                            <td>F</td>
+                            <td>..-.</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td>--.</td>
+                            <td>H</td>
+                            <td>....</td>
+                            <td>I</td>
+                            <td>..</td>
+                        </tr>
+                        <tr>
+                            <td>J</td>
+                            <td>.---</td>
+                            <td>K</td>
+                            <td>-.-</td>
+                            <td>L</td>
+                            <td>.-..</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>--</td>
+                            <td>N</td>
+                            <td>-.</td>
+                            <td>O</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>.--.</td>
+                            <td>Q</td>
+                            <td>--.-</td>
+                            <td>R</td>
+                            <td>.-.</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>...</td>
+                            <td>T</td>
+                            <td>-</td>
+                            <td>U</td>
+                            <td>..-</td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>...-</td>
+                            <td>W</td>
+                            <td>.--</td>
+                            <td>X</td>
+                            <td>-..-</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td>-.--</td>
+                            <td>Z</td>
+                            <td>--..</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="Numbers">
+                <table>
+                    <tbody>
+                        <tr>
+                            <h3>Numbers</h3>
+                            <td>0</td>
+                            <td>-----</td>
+                            <td>1</td>
+                            <td>.----</td>
+                            <td>2</td>
+                            <td>..---</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>...--</td>
+                            <td>4</td>
+                            <td>....-</td>
+                            <td>5</td>
+                            <td>.....</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>-....</td>
+                            <td>7</td>
+                            <td>--...</td>
+                            <td>8</td>
+                            <td>---..</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>----.</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="punctuation">
+                <table>
+                    <tbody>
+                        <h3>Punctuation</h3>
+                    <tr>
+                        <td>.</td>
+                        <td>.-.-.-</td>
+                        <td>,</td>
+                        <td>--..--</td>
+                        <td>?</td>
+                        <td>..--..</td>
+                    </tr>
+                    <tr>
+                        <td>'</td>
+                        <td>.----.</td>
+                        <td>!</td>
+                        <td>-.-.--</td>
+                        <td>/</td>
+                        <td>-..-.</td>
+                    </tr>
+                    <tr>
+                        <td>(</td>
+                        <td>-.--.</td>
+                        <td>)</td>
+                        <td>-.--.-</td>
+                        <td>&</td>
+                        <td>.-...</td>
+                    </tr>
+                    <tr>
+                        <td>:</td>
+                        <td>---...</td>
+                        <td>;</td>
+                        <td>-.-.-.</td>
+                        <td>=</td>
+                        <td>-...-</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>.-.-.</td>
+                        <td>-</td>
+                        <td>-....-</td>
+                        <td>	_</td>
+                        <td>..--.-</td>
+                    </tr>
+                    <tr>
+                        <td>"</td>
+                        <td>.-..-.</td>
+                        <td>$</td>
+                        <td>...-..-</td>
+                        <td>@</td>
+                        <td>.--.-.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        
+
+
+
+    </main>
+
 
 
     <script src="./assets/main.js"></script>
